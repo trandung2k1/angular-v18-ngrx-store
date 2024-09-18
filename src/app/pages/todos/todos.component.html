@@ -1,0 +1,13 @@
+<p>todos works!</p>
+<form>
+  <input
+    type="text"
+    required
+    [(ngModel)]="title"
+    name="title"
+    (change)="updateTitle($event)"
+  />
+</form>
+<div *ngFor="let todo of todos">
+  <h2>{{ todo?.title }}</h2>
+</div>
